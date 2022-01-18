@@ -69,7 +69,7 @@ export const loadTasks = () => async (dispatch) => {
 export const taskCreated = (payload) => async (dispatch) => {
     console.log(payload);
     try {
-        const { data } = await todosService.create(payload);
+        const data = await todosService.create(payload);
         console.log(data);
         dispatch(create(data));
     } catch (error) {
